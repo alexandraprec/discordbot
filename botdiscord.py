@@ -40,16 +40,16 @@ async def on_message(message):
     
     #If the following message was sent in the aws channel, send the following message
     if channel == 'aws':
-        if user_message.lower() == "Marco?" or user_message.lower() == "Marco?":
+        if user_message.lower() == "marco?":
             await message.channel.send(f"Polo! Hello, {username}. Your EC2 Data: {ec2_metadata.region}")
             return
         
         #Respond to the specific text with the following text
-        elif user_message.lower() == "Work it, make it, do it, makes us":
+        elif user_message.lower() == "work it, make it, do it, makes us":
             await message.channel.send(f'Harder, better, faster, stronger')
         
         #Respond to the following text with the sender's username and ec2 region
-        elif user_message.lower() == "Give me my EC2 Data":
+        elif user_message.lower() == "give me my ec2 data":
             await message.channel.send("{username}, your instance data is" + ec2_metadata.region)
 
 #Run the bot with the token from before
