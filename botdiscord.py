@@ -12,6 +12,8 @@ print(ec2_metadata.instance_id)
 #Get bot token from environment and set up discord intents for bot events
 token = str(os.getenv('TOKEN')) #
 intents = discord.Intents.default()
+intents.members = True
+intents.presences = True
 intents.message_content = True
 
 #Creating a discord client instance
